@@ -1,7 +1,6 @@
 import React from 'react'
 
 function Scard({ img, title, desc, bc }) {
-    console.log(img)
     return (
         <div className='s-card' style={{ backgroundColor: bc }}>
             <div className="s-img">

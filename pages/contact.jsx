@@ -1,3 +1,4 @@
+import Contacthehe from '@/comps/COntact/Contact'
 import Head from 'next/head'
 import React from 'react'
 
@@ -9,7 +10,8 @@ function Contact() {
                 <meta name="description" content="Contact page of Advanceble Multimedia" />
 
             </Head>
-            Contact Form will be available Soon</div>
+            <Contacthehe />
+        </div>
     )
 }
 

@@ -1,18 +1,22 @@
 import Head from 'next/head'
-import React from 'react'
-import Image from 'next/image'
+import React, { useEffect } from 'react'
 import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
 import Landing from '@/comps/Landing/Landing'
 import Service from '@/comps/Landing/Service'
 import About from '@/comps/Landing/About'
 import Testomonial from '@/comps/Landing/Testomonial'
 import Footer from '@/comps/Landing/Footer'
+import Contact from '@/comps/COntact/Contact'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   var [loading, setLoading] = React.useState(true)
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000)
+  }, [])
   return (
     <>
       <Head>
@@ -25,6 +29,7 @@ export default function Home() {
         <Landing />
         <Service />
         <Testomonial />
+        <Contact />
         <About />
         <Footer />
       </>}

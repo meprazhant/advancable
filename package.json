@@ -11,9 +11,13 @@
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.15.1",
     "@next/font": "13.3.0",
+    "iron-session": "^6.3.1",
+    "mongoose": "^7.2.1",
     "next": "13.3.0",
+    "next-iron-session": "^4.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.8.0"
+    "react-icons": "^4.8.0",
+    "react-text-transition": "^3.1.0"
   }
 }
