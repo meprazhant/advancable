@@ -1,6 +1,8 @@
 // connect to mongodb
 const mongoose = require('mongoose');
 
+console.log(process.env.NEXT_PUBLIC_MONGO)
+
 mongoose.connect(process.env.NEXT_PUBLIC_MONGO, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;
