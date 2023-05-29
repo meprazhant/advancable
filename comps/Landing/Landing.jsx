@@ -12,7 +12,6 @@ function Landing() {
                     <button>Learn More</button>
                 </div>
             </div>
-
         </div>
     )
 }
