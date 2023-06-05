@@ -930,6 +930,13 @@ a {
   box-shadow: 0 0 10px 0 #1a1a1a;
 }
 
+.p-img-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .p-card img {
   max-width: 300px;
   max-height: 200px;
@@ -940,6 +947,7 @@ a {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   color: #fff;
+  word-break: break-all;
 }
 
 .client {
