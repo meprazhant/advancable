@@ -9,6 +9,7 @@ export default function ProtectedPage({ user }) {
         if (!user) {
             router.push('/login');
         }
+        console.log(user);
     }, [user, router]);
 
     if (!user) {

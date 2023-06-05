@@ -7,7 +7,7 @@ import { BiHelpCircle } from 'react-icons/bi'
 import { MdMiscellaneousServices } from 'react-icons/md'
 import { MdContactSupport } from 'react-icons/md'
 
-function Navbar() {
+function Navbar({ user }) {
     var [mobhide, setMobhide] = React.useState(true)
     var router = useRouter()
     function navHome() {
@@ -16,23 +16,22 @@ function Navbar() {
     function navHam() {
         setMobhide(!mobhide)
     }
+    var [userData, setUserData] = React.useState(null)
 
-    function stickNavtoTop() {
-        var nav = document.querySelector('#nav')
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 10) {
-                nav.style.position = 'fixed'
-                nav.style.backgroundColor = '#000000'
-            } else {
-                nav.style.position = 'relative'
-                nav.style.backgroundColor = '#0000002b'
-            }
-        }
-        )
+    function fetchUser() {
+        fetch("/api/usersession")
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data.status)
+                if (data.status === 200)
+                    setUserData(data.session)
+                else
+                    setUserData(null)
+            })
     }
-    // React.useEffect(() => {
-    //     stickNavtoTop()
-    // }, [])
+    React.useEffect(() => {
+        fetchUser()
+    }, [router.pathname])
     return (
         <div className='nav' id='nav'>
             <div className="nav-logo" onClick={navHome}>
@@ -44,6 +43,8 @@ function Navbar() {
                 <Link href='/about'>About</Link>
                 <Link href='/contact'>Contact</Link>
                 <Link href='/service'>Service</Link>
+                {userData && <Link href='/admin'>Admin</Link>}
+
             </div>
             <div className="nav-ham" onClick={navHam}>
                 <GiHamburgerMenu />
@@ -63,6 +64,10 @@ function Navbar() {
                     <Link onClick={() => setMobhide(true)} href='/service'>
                         <MdMiscellaneousServices />
                         Service</Link>
+                    {userData && <Link onClick={() => setMobhide(true)} href='/admin'>
+                        <AiOutlineFundProjectionScreen />
+                        Admin</Link>}
+
                 </div>
             </div>}
         </div>
@@ -70,3 +75,4 @@ function Navbar() {
 }
 
 export default Navbar
+

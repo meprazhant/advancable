@@ -779,6 +779,23 @@ a {
   background-color: #4952ff;
 }
 
+.admin {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ad-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #232323;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #1a1a1a;
+}
+
 @media only screen and (max-width:660px) {
   .nav-links {
     display: none;
