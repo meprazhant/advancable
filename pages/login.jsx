@@ -30,7 +30,7 @@ export default function LoginPage() {
 
     return (
         <div className='login'>
-            {(wrong) && <div className="alert" id="alert">
+            {(wrong) && <div className="alertx" id="alert">
                 <p>Wrong Credentials</p>
             </div>}
             <h1>Login</h1>

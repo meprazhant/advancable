@@ -18,7 +18,8 @@ export default withSession(async (req, res) => {
         email: user.email,
         name: user.name,
         image: user.image,
-        _id: user._id
+        _id: user._id,
+        role: user.role
     }
     req.session.set('user', userObj);
     await req.session.save();
