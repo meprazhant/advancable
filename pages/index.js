@@ -44,7 +44,7 @@ export default function Home() {
       {/* You can open the modal using ID.showModal() method */}
       <button className="btn" id="showAlert" onClick={() => window.my_modal_4.showModal()}>open modal</button>
       <dialog id="my_modal_4" className="modal">
-        <form method="dialog" className="modal-box w-2/5 max-w-5xl">
+        <form method="dialog" className="modal-box  max-w-5xl">
           <h3 className="font-bold text-lg">{alert.title}</h3>
           <p className="py-4">{alert.description}</p>
           <img src={alert.image} alt={alert.title} className="conImg " />
@@ -78,3 +78,5 @@ export default function Home() {
     </>
   )
 }
+
+

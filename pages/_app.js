@@ -1,11 +1,15 @@
 import Navbar from '@/comps/Navbar'
 import '@/styles/globals.css'
+import withSession from '../session';
 
-export default function App({ Component, pageProps }) {
+
+export default function App({ Component, pageProps, user }) {
 
 
   return <div className="wrap">
-    <Navbar />
+
+    <Navbar user={user} />
     <Component {...pageProps} />
   </div>
 }
+

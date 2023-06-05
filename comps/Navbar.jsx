@@ -22,7 +22,6 @@ function Navbar({ user }) {
         fetch("/api/usersession")
             .then((res) => res.json())
             .then((data) => {
-                console.log(data.status)
                 if (data.status === 200)
                     setUserData(data.session)
                 else
