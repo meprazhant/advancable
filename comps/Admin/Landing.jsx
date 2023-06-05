@@ -250,7 +250,7 @@ function Landing({ user }) {
     return (
         <div className='admin'>
             <div className="adm-logout">
-                <h1 className='text-3xl font-bold'>Admin Panel</h1>
+                <h1 className='sm:text-3xl text-xl font-bold'>Admin Panel</h1>
                 <div className="adm-info">
                     <h1 className='text-2xl font-bold'>Hello {user.name}</h1>
                     <button className='btn btn-warning' onClick={logout}>Logout</button>
@@ -263,7 +263,7 @@ function Landing({ user }) {
                 </div>
             </div>}
             <div className="ad-card">
-                <h1 className='text-3xl font-bold'>Latest Messages</h1>
+                <h1 className='sm:text-3xl text-xl font-bold'>Latest Messages</h1>
                 <div className="ad-messa-cont">
                     {messages && messages.map((message, index) => {
                         dayjs.extend(relativeTime)
@@ -290,7 +290,7 @@ function Landing({ user }) {
                 </div>
             </div>
             <div className="ad-card">
-                <h1 className='text-3xl font-bold'>Latest Alerts</h1>
+                <h1 className='sm:text-3xl text-xl font-bold'>Latest Alerts</h1>
                 <div className="ad-messa-cont">
                     {(alerts && alerts.length !== 0) && alerts.map((alert, index) => {
                         dayjs.extend(relativeTime)
@@ -353,7 +353,7 @@ function Landing({ user }) {
             </div>
 
             <div className="ad-card">
-                <h1 className='text-3xl font-bold'>Your Projects</h1>
+                <h1 className='sm:text-3xl text-xl font-bold'>Your Projects</h1>
                 <div className="ad-messa-cont">
                     {(projects && projects.length !== 0) && projects.map((alert, index) => {
                         dayjs.extend(relativeTime)

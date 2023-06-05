@@ -221,6 +221,12 @@ a {
   border-bottom: 1px solid #ffffff56;
 }
 
+.s-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .s-text {
   display: flex;
   flex-direction: column;
@@ -1138,5 +1144,29 @@ a {
 
   .contact-about h3 {
     font-size: 1.5rem;
+  }
+
+  .ad-card {
+    padding: 10px;
+  }
+
+  .adm-sa h3 {
+    font-size: 1.2rem;
+  }
+
+  .adm-sa {
+    align-items: start;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .p-card {
+    width: 100%;
+  }
+
+  .p-card h3 {
+    /* break the text */
+    word-break: break-all;
+    text-align: left;
   }
 }
