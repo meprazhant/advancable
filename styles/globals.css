@@ -12,9 +12,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: #000;
   color: #ffffff;
-
 }
 
 body {
@@ -636,13 +634,44 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  min-height: 100vh;
+  flex-direction: column;
+  min-height: 80vh;
   gap: 30px;
   border-radius: 10px;
   padding: 20px;
   background-color: #232323;
   box-shadow: 0 0 10px 0 #1a1a1a;
+}
+
+.con-wrap {
+  display: flex;
+}
+
+.orderForm {
+  animation: slideup 1s ease-in-out;
+}
+
+@keyframes slideup {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+}
+
+.contact-subject {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .contact-form {
@@ -983,6 +1012,20 @@ a {
   width: 100%;
   background-color: #252020;
   border-radius: 10px;
+}
+
+.orderCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media only screen and (max-width:660px) {

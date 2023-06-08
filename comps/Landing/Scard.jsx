@@ -1,6 +1,8 @@
+import { useRouter } from 'next/router'
 import React from 'react'
 
-function Scard({ img, title, desc, bc }) {
+function Scard({ img, title, desc, bc, link }) {
+    var router = useRouter()
     return (
         <div className='s-card' style={{ backgroundColor: bc }}>
             <div className="s-img">
@@ -9,7 +11,7 @@ function Scard({ img, title, desc, bc }) {
             <div className="s-text">
                 <h1>{title}</h1>
                 <p>{desc}</p>
-                <button>Place an Order</button>
+                <button onClick={() => router.push(link)}>Place an Order</button>
             </div>
         </div>
     )
