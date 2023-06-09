@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React, { useEffect } from 'react'
 import TextTransition, { presets } from 'react-text-transition';
 
@@ -5,6 +6,7 @@ const TEXTS = ['We design and build creative Graphics.', 'We Produce and Mix mus
 
 function Landing() {
     const [index, setIndex] = React.useState(0);
+    var router = useRouter()
 
     React.useEffect(() => {
         const intervalId = setInterval(
@@ -30,8 +32,8 @@ function Landing() {
                 <span className='lt-line'></span>
                 <p>just place an order if you have some graphics works, music productions or graphics motion works to do</p>
                 <div className="lt-btns">
-                    <button>Place an Order</button>
-                    <button>Learn More</button>
+                    <button onClick={() => router.push("/order")}>Place an Order</button>
+                    <button onClick={() => router.push("/about")}>Learn More</button>
                 </div>
             </div>
         </div>

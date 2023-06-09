@@ -1033,6 +1033,15 @@ a {
     display: none;
   }
 
+  .con-wrap {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .orderCart {
+    height: 100%;
+  }
+
   .nav-ham {
     display: block;
     font-size: 1.8rem;
